@@ -21,17 +21,17 @@ void Print1DArry(string[] array)
 string[] findArray(string[] array, int count)
 {
     string[] result = new string[0];
-    for (int index = 0; index < array.Length; index++)
+    for (int i = 0; i < array.Length; i++)
     {
-        if (array[index].Length <= count)
+        if (array[i].Length <= count)
         {
-            result = result.Concat(new string[] { array[index] }).ToArray();
+            result = result.Concat(new string[] { array[i] }).ToArray();
         }
     }
     return result;
 }
 
-string[] startArray = new string[] { "1234", "345", "finish", "world", ":-", "-2" };
+string[] startArray = new string[] { "hello", "2", "world", ":-)", "-2" };
 
 string[] finishArray = findArray(startArray, 3);
 
